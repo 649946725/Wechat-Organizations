@@ -1,0 +1,18 @@
+<form bindsubmit="info">
+<view class='margin-xl bg-white padding-xl  radius shadow-warp'>
+  <view class='text-center margin-bottom text-lg  text-black text-bold' style="font-size:35rpx;">数据导出</view>
+
+<view class="cu-form-group">
+		<view class="title">名字</view>
+		<picker  value="{{shetuan[index]}}" range="{{shetuan}}" bindchange="type" name="type">
+			<view class="picker">
+				{{shetuan[index]}}
+			</view>
+		</picker>
+	</view>
+</view>
+  <view style="width:350rpx;margin:25rpx auto;">
+  <button class="cu-btn round bg-blue shadow" style="width:350rpx;height:90rpx;" formType="submit">导出</button>
+  </view>
+         <view bindtap="fuzhi" wx:if="{{fileUrl}}" class="weui-cell" style="font-size:13px;font-weight:700;color:blue">{{fileUrl}}</view>
+  </form>
